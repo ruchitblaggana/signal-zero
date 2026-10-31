@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #101820;
+  color: #E8EDF0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A3A47;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #344654;
+  background-clip: padding-box;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid #F4B942;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Selection */
+::selection {
+  background: rgba(244, 185, 66, 0.25);
+  color: #E8EDF0;
+}
+
+/* Utility: subtle grid backdrop */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(72, 88, 103, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72, 88, 103, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-grid-fine {
+  background-image:
+    linear-gradient(rgba(72, 88, 103, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72, 88, 103, 0.06) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+/* Hairline borders */
+.hairline {
+  border-color: rgba(145, 160, 172, 0.12);
+}
+
+/* Mono numbers */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+/* Text balance for headings */
+.text-balance {
+  text-wrap: balance;
+}
